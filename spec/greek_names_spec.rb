@@ -46,4 +46,61 @@ describe 'GreekNames' do
       end
     end
   end
+
+  describe '.genitive' do
+    context 'male names' do
+      context 'ending in ΑΣ' do
+        it 'Should return ΚΩΣΤΑ' do
+          expect( GreeNames.genitive('ΚΩΣΤΑΣ') ).to eql('ΚΩΣΤΑ')
+        end
+      end
+      context 'ending in ΗΣ' do
+        it 'Should return ΜΑΝΩΛΗ' do
+          expect( GreeNames.genitive('ΜΑΝΩΛΗΣ') ).to eql('ΜΑΝΩΛΗ')
+        end
+      end
+      context 'ending in ΟΣ' do
+        it 'Should return ΠΑΝΟ' do
+          expect( GreeNames.genitive('ΠΑΝΟΣ') ).to eql('ΠΑΝΟ')
+        end
+      end
+      context 'ending in ΕΣ' do
+      end
+    end
+    context 'female names' do
+      context 'ending in Α' do
+        it 'Should return ΑΝΝΑ' do
+          expect( GreeNames.genitive('ΑΝΝΑ') ).to eql('ΑΝΝΑΣ')
+        end
+      end
+      context 'ending in Η' do
+        it 'Should return ΑΓΓΕΛΙΚΗ' do
+          expect( GreeNames.genitive('ΑΓΓΕΛΙΚΗ') ).to eql('ΑΓΓΕΛΙΚΗΣ')
+        end
+      end
+      context 'ending in Ο' do
+        it 'Should return ' do
+          expect( GreeNames.genitive('ΚΩΣΤΑΣ') ).to eql('ΚΩΣΤΑ')
+        end
+      end
+      context 'ending in Υ' do
+        it 'Should return ' do
+          expect( GreeNames.genitive('ΚΩΣΤΑΣ') ).to eql('ΚΩΣΤΑ')
+        end
+      end
+      context 'ending in Ω' do
+        it 'Should return ΗΡΩ' do
+          expect( GreeNames.genitive('ΗΡΩ') ).to eql('ΗΡΟΥΣ')
+        end
+      end
+      context 'ending in Σ' do
+        it 'Should return ΑΡΤΕΜΙΣ' do
+          expect( GreeNames.genitive('ΑΡΤΕΜΙΣ') ).to eql('ΚΩΣΤΑ')
+        end
+      end
+    end
+  end
+
+  describe '.accusative' do
+  end
 end
